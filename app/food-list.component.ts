@@ -4,6 +4,7 @@ import { Food } from './food.model';
 @Component({
   selector: 'food-list',
   template: `
+    <h3 id="sort-header">Would you like to sort your food?</h3>
     <select (change)="onChange($event.target.value)" class="filter">
       <option value="all">All Foods</option>
       <option value="lowCalorie">Low Calorie Foods</option>

@@ -6,7 +6,7 @@ import { Now } from './now.component';
   selector: 'my-app',
   template: `
   <div class="container">
-    <div class="row">
+    <div class="row jumbotron">
       <div class="col-sm-4">
         <h1>Meal Tracker</h1>
         <now format="'h:mm:ss'"></now>
@@ -33,6 +33,13 @@ import { Now } from './now.component';
           (newFoodSender)="addFood($event)"
         ></new-food>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-6">
+        <h3><a id="body" href="https://thebodyisnotanapology.com/">Click Here to learn about Body Positivity.</a></h3>
+      </div>
+      <div class="col-sm-2"></div>
     </div>
   </div>
   `
