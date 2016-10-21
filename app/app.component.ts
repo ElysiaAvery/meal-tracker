@@ -8,7 +8,9 @@ import { Food } from './food.model';
     <h1>Meal Tracker</h1>
     <div class="row">
       <div class="col-sm-4">
-
+        <food-total
+          [childSelectedFoodList]="masterFoodList"
+        ></food-total>
         <food-list
           [childFoodList]="masterFoodList"
           (clickSender)="showDetails($event)"
@@ -46,7 +48,3 @@ export class AppComponent {
     this.masterFoodList.push(newFoodFromChild);
   }
 }
-
-// <food-total
-//   [childSelectedFoodList]="masterFoodList"
-// ></food-total>

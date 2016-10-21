@@ -7,7 +7,7 @@ import { Food } from './food.model';
   <div class="well" *ngIf="childSelectedFoodList && childSelectedFoodList.length > 0">
     <div class="row" *ngFor="let childSelectedFood of childSelectedFoodList">
     </div>
-      <h2 class="total">Total Calories: {{ childSelectedFoodList.calories | total | number:'1.1-2'}}</h2>
+      <h2 class="total">Total Calories: {{ childSelectedFoodList | total}}</h2>
   </div>
   `
 })
