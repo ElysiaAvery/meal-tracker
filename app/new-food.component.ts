@@ -6,6 +6,11 @@ import { Food } from './food.model';
   template: `
     <h2>Add A New Meal or Snack:</h2>
     <div>
+      <label>Enter Time Food was Consumed:</label>
+      <input type="datetime-local" [value]="date"
+        (change)="date=$event.target.value" #newDate> {{date}}
+    </div>
+    <div>
       <label>Enter the name of the food: </label>
       <input required type="text" #newName>
     </div>
@@ -18,7 +23,8 @@ import { Food } from './food.model';
       <input required type="text" #newDetails>
     </div>
     <button (click)="
-      addMealClicked(newName.value, newCalories.value, newDetails.value);
+      addMealClicked(newDate.value, newName.value, newCalories.value, newDetails.value);
+      newDate.value='';
       newName.value='';
       newCalories.value='';
       newDetails.value='';
@@ -28,9 +34,12 @@ import { Food } from './food.model';
 
 export class NewFoodComponent {
   @Output() newFoodSender = new EventEmitter();
-  addMealClicked(name: string, calories: number, details: string) {
-    var newFood: Food = new Food(name, calories = +calories, details);
+  date: string;
+    constructor() {
+        this.date = new Date().toISOString().slice(0, 16);
+  }
+  addMealClicked(date: string, name: string, calories: number, details: string) {
+    var newFood: Food = new Food(this.date, name, calories = +calories, details);
     this.newFoodSender.emit(newFood);
-    console.log(newFood);
   }
 }

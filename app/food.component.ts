@@ -9,6 +9,7 @@ import { Food } from './food.model';
       <h2 *ngIf="food.calories < 500" class="low-calorie">{{ food.name }}</h2>
       <h4>{{ food.calories }}</h4>
       <h4>{{ food.details }}</h4>
+      <h4>{{ food.date }}</h4>
     </div>
   `
 })
