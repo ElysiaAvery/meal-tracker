@@ -6,9 +6,16 @@ import { Food } from './food.model';
   template: `
   <div class="container">
     <h1>Meal Tracker</h1>
-    <new-food
-      (newFoodSender)="addFood($event)"
-    ></new-food>
+    <div class="row">
+      <div class="col-sm-6">
+        
+      </div>
+      <div class="col-sm-6">
+        <new-food
+          (newFoodSender)="addFood($event)"
+        ></new-food>
+      </div>
+    </div>
   </div>
   `
 })
