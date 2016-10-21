@@ -14,5 +14,14 @@ import { Food } from './food.model';
 })
 
 export class FoodComponent {
-  @Input() food: Food;
+  @Input() food: Food[];
+
 }
+
+// <div class="well" *ngIf="childSelectedFoodList && childSelectedFoodList.length > null">
+//   <div class="row" *ngFor="let childSelectedFood of childSelectedFoodList">
+
+// <h2 class="total">Total Calories Consumed: {{foods | total}}</h2>
+
+// </div>
+// </div>
