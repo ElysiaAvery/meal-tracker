@@ -14,4 +14,5 @@ import { Food } from './food.model';
 
 export class TotalCalorieComponent {
   @Input() childSelectedFoodList: Food[];
+
 }
