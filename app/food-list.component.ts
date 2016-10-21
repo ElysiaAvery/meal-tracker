@@ -9,17 +9,19 @@ import { Food } from './food.model';
       <option value="lowCalorie">Low Calorie Foods</option>
       <option value="highCalorie">High Calorie Foods</option>
     </select>
-
+    <div *ngFor="let currentFood of childFoodList | calorie:selectedCalories">
+      <food-display [food]="currentFood"></food-display>
+      <button (click)="editButtonClicked(currentFood)">Edit Food</button>
+    </div>
   `
 })
 
 export class FoodListComponent {
   @Input() childFoodList: Food[];
   @Output() clickSender = new EventEmitter();
-
+  public selectedCalories: string = "all";
+  onChange(optionFromList){
+    this.selectedCalories = optionFromList;
+    console.log(this.selectedCalories);
+  }
 }
-
-// <div *ngFor="let currentFood of childFoodList">
-//   <food-display [food]="currentFood"></food-display>
-//   <button (click)="editButtonClicked(currentFood)">Edit Food</button>
-// </div>

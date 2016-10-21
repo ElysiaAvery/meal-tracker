@@ -28,9 +28,9 @@ export class AppComponent {
     new Food("Pizza", 400, "Didn't eat the crust.")
   ];
 
-  slectedFood: Food = null;
+  selectedFood: Food = null;
   showDetails(clickedFood: Food) {
-    // this.selectedFood = clickedFood;
+    this.selectedFood = clickedFood;
   }
 
   addFood(newFoodFromChild: Food) {
