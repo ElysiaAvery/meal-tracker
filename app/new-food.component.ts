@@ -6,15 +6,15 @@ import { Food } from './food.model';
   template: `
     <h2>Add A New Meal or Snack:</h2>
     <div>
-      <label>Enter the name of the food: <label>
+      <label>Enter the name of the food: </label>
       <input required type="text" #newName>
     </div>
     <div>
-      <label>Enter amount of calories: <label>
+      <label>Enter amount of calories: </label>
       <input required type="number" #newCalories>
     </div>
     <div>
-      <label>Enter details about this meal: <label>
+      <label>Enter details about this meal: </label>
       <input required type="text" #newDetails>
     </div>
     <button (click)="
