@@ -25,7 +25,7 @@ import { Food } from './food.model';
 
 export class AppComponent {
   public masterFoodList: Food[] = [
-    new Food("Pizza", 400, "Didn't eat the crust.")
+    new Food("Pizza", 500, "Didn't eat the crust.")
   ];
 
   selectedFood: Food = null;
