@@ -91,7 +91,7 @@ gulp.task('serve', ['build'], function() {
   });
   gulp.watch(['resources/js/*.js'], ['jsBuild']); // vanilla js changes, reload.
   gulp.watch(['*.html'], ['htmlBuild']); // html changes, reload.
-  gulp.watch(['resources/scss/*.scss', 'resources/scss/*.scss'], ['cssBuild']); // css or sass changes, concatenate all css/sass, build, reload.
+  gulp.watch(['resources/scss/*.scss'], ['cssBuild']); // css or sass changes, concatenate all css/sass, build, reload.
   gulp.watch(['app/*.ts'], ['tsBuild']); // typescript files change, compile then reload.
 });
 
