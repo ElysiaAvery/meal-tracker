@@ -6,13 +6,19 @@ import { Now } from './now.component';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>Meal Tracker</h1>
-    <now format="'h:mm:ss'"></now>
     <div class="row">
       <div class="col-sm-4">
+        <h1>Meal Tracker</h1>
+        <now format="'h:mm:ss'"></now>
+      </div>
+      <div class="col-sm-8">
         <food-total
           [childSelectedFoodList]="masterFoodList"
         ></food-total>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
         <food-list
           [childFoodList]="masterFoodList"
           (clickSender)="showDetails($event)"
@@ -34,7 +40,7 @@ import { Now } from './now.component';
 
 export class AppComponent {
   public masterFoodList: Food[] = [
-    new Food("", "Pizza", 500, "Didn't eat the crust.")
+
   ];
 
   selectedFood: Food = null;

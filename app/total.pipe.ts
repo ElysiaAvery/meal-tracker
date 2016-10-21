@@ -7,12 +7,10 @@ import { Food } from './food.model';
 })
 export class TotalPipe {
   transform(input: Food[]) {
-    console.log(input + "total pipe");
     if(input){
       var output: number = 0;
       for(var i = 0; i < input.length; i++) {
         output = input[i].calories + output;
-        console.log(output + "pipe output");
       }
       return output;
     }
