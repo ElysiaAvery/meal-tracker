@@ -10,8 +10,12 @@ import { Food } from './food.model';
       <div class="col-sm-6">
         <food-list
           [childFoodList]="masterFoodList"
-          (clickSender)="showDeatils($event)"
+          (clickSender)="showDetails($event)"
         ></food-list>
+        <edit-food
+          [childSelectedFood]="selectedFood"
+          (doneEditingClickedSender)="finishedEditing()"
+        ></edit-food>
       </div>
       <div class="col-sm-6">
         <new-food
@@ -31,6 +35,10 @@ export class AppComponent {
   selectedFood: Food = null;
   showDetails(clickedFood: Food) {
     this.selectedFood = clickedFood;
+  }
+
+  finishedEditing() {
+    this.selectedFood = null;
   }
 
   addFood(newFoodFromChild: Food) {
