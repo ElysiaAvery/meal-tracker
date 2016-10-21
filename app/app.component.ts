@@ -15,7 +15,7 @@ import { Food } from './food.model';
 
 export class AppComponent {
   public masterFoodList: Food[] = [
-
+    new Food("Pizza", 400, "Didn't eat the crust.")
   ];
 
   addFood(newFoodFromChild: Food) {
