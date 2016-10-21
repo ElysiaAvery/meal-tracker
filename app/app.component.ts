@@ -7,7 +7,7 @@ import { Food } from './food.model';
   <div class="container">
     <h1>Meal Tracker</h1>
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <food-list
           [childFoodList]="masterFoodList"
           (clickSender)="showDetails($event)"
@@ -17,7 +17,7 @@ import { Food } from './food.model';
           (doneEditingClickedSender)="finishedEditing()"
         ></edit-food>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <new-food
           (newFoodSender)="addFood($event)"
         ></new-food>
