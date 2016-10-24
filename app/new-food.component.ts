@@ -7,7 +7,7 @@ import { Food } from './food.model';
     <h2>Add A New Meal or Snack:</h2>
     <div>
       <label>Enter Time Food was Consumed:</label>
-      <input type="datetime-local" [value]="date"
+      <input required type="datetime-local" [value]="date"
         (change)="date=$event.target.value" #newDate> {{date}}
     </div>
     <div>
