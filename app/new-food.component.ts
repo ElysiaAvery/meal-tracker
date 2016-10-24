@@ -8,7 +8,7 @@ import { Food } from './food.model';
     <div>
       <label>Enter Time Food was Consumed:</label>
       <input required type="datetime-local" [value]="date"
-        (change)="date=$event.target.value" #newDate> {{date}}
+        (change)="date=$event.target.value" #newDate>
     </div>
     <div>
       <label>Enter the name of the food: </label>
