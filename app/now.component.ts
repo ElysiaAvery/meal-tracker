@@ -3,7 +3,7 @@ import { Component, Attribute } from '@angular/core'
 @Component({
   selector: 'now',
   template: `
-    <h3 (updateTime)="updateMyTime()">{{date | date:'dd/MM/yyyy hh:mm:ss'}}</h3>
+    <h3 (updateTime)="updateMyTime()">{{date | date:'MM/dd/yyyy hh:mm:ss'}}</h3>
   `
 })
 
